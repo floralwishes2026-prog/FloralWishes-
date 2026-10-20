@@ -1,0 +1,78 @@
+// <section class="hero">
+  <div class="hero-content">
+    <span class="badge">🌹 COLECȚIA PREMIUM</span>
+    <h1>Flori care spun<br><span>mai mult decât cuvintele.</span></h1>
+    <p>
+      Trandafiri spectaculoși, buchete elegante
+      și momente care rămân în suflet.
+    </p>
+    <a href="#produse" class="hero-btn">Descoperă colecția ✨</a>
+  </div>
+</section>
+
+<style>
+.hero {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  color: white;
+  background:
+    linear-gradient(90deg,
+      rgba(20, 0, 8, 0.94) 0%,
+      rgba(40, 0, 15, 0.65) 45%,
+      rgba(20, 0, 8, 0.05) 100%),
+    url("https://images.unsplash.com/photo- red-roses");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 30px 30px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.badge {
+  color: #ffb6c8;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.08;
+  margin: 22px 0;
+}
+
+.hero h1 span {
+  color: #ff718f;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.hero p {
+  color: #f4dfe5;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 470px;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 16px 28px;
+  background: linear-gradient(135deg, #ff5478, #bd123e);
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: bold;
+  box-shadow: 0 8px 30px #bd123e66;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px #ff547888;
+}
+</style>
