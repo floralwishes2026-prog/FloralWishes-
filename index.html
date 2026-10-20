@@ -1,78 +1,215 @@
-// <section class="hero">
+<section class="hero">
   <div class="hero-content">
     <span class="badge">🌹 COLECȚIA PREMIUM</span>
-    <h1>Flori care spun<br><span>mai mult decât cuvintele.</span></h1>
+
+    <h1>
+      Flori care spun
+      <span>mai mult decât cuvintele.</span>
+    </h1>
+
     <p>
       Trandafiri spectaculoși, buchete elegante
       și momente care rămân în suflet.
     </p>
-    <a href="#produse" class="hero-btn">Descoperă colecția ✨</a>
+
+    <a href="#produse" class="hero-btn">
+      Descoperă colecția ✨
+    </a>
   </div>
 </section>
 
 <style>
+/* Elimină spațiile implicite ale paginii */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/* Secțiunea principală */
 .hero {
-  min-height: 600px;
+  position: relative;
+  isolation: isolate;
   display: flex;
   align-items: center;
-  padding: 70px 8%;
-  color: white;
-  background:
-    linear-gradient(90deg,
-      rgba(20, 0, 8, 0.94) 0%,
-      rgba(40, 0, 15, 0.65) 45%,
-      rgba(20, 0, 8, 0.05) 100%),
-    url("https://images.unsplash.com/photo- red-roses");
+
+  width: 100%;
+  min-height: 580px;
+  min-height: clamp(480px, 78vh, 760px);
+
+  padding: clamp(32px, 7vw, 90px)
+           clamp(22px, 8vw, 120px);
+
+  overflow: hidden;
+  color: #fff;
+
+  background-color: #24131b;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(24, 5, 14, 0.94) 0%,
+      rgba(40, 10, 23, 0.78) 48%,
+      rgba(30, 10, 20, 0.25) 100%
+    ),
+    url("https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=2000&q=85");
+
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
   border-radius: 0 0 30px 30px;
 }
 
 .hero-content {
-  max-width: 650px;
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 0;
 }
 
 .badge {
+  display: inline-block;
+  margin-bottom: 8px;
+
   color: #ffb6c8;
-  letter-spacing: 4px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.8;
 }
 
 .hero h1 {
-  font-size: clamp(42px, 6vw, 76px);
+  margin: 18px 0;
+  max-width: 680px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 5.5vw, 76px);
   line-height: 1.08;
-  margin: 22px 0;
+  font-weight: 700;
+  overflow-wrap: break-word;
 }
 
 .hero h1 span {
+  display: block;
   color: #ff718f;
-  font-family: Georgia, serif;
   font-style: italic;
 }
 
 .hero p {
-  color: #f4dfe5;
-  font-size: 18px;
-  line-height: 1.8;
   max-width: 470px;
+  margin: 0;
+
+  color: #f4dfe5;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.8;
 }
 
 .hero-btn {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 16px 28px;
-  background: linear-gradient(135deg, #ff5478, #bd123e);
-  color: white;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+  margin-top: 26px;
+  padding: 15px 26px;
+
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 40px;
-  font-weight: bold;
-  box-shadow: 0 8px 30px #bd123e66;
-  transition: 0.3s;
+
+  background: linear-gradient(135deg, #ff5478, #bd123e);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 8px 30px rgba(189, 18, 62, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .hero-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 35px #ff547888;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 84, 120, 0.4);
+}
+
+/* Telefoane */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 0;
+    min-height: 490px;
+    min-height: 68svh;
+
+    padding: 64px 24px;
+    align-items: center;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(24, 5, 14, 0.88),
+        rgba(35, 8, 20, 0.62)
+      ),
+      url("https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=1000&q=85");
+
+    background-position: center;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .badge {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .hero h1 {
+    margin: 18px 0;
+    font-size: clamp(34px, 9vw, 46px);
+    line-height: 1.12;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .hero-btn {
+    margin-top: 22px;
+    padding: 14px 22px;
+    font-size: 13px;
+  }
+}
+
+/* Telefoane foarte înguste */
+@media (max-width: 360px) {
+  .hero {
+    padding: 48px 18px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .badge {
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Respectă preferința pentru animații reduse */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-btn {
+    transition: none;
+  }
 }
 </style>
